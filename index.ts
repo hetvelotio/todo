@@ -12,10 +12,14 @@ app.use(express.urlencoded({ extended: true }));
 
 import userRoutes from './routes/userRoutes';
 import todoRoutes from './routes/todoRoutes';
+import actorRoutes from './routes/actorRoutes';
+import movieRoutes from './routes/movieRoutes';
 
 
 app.use('/api', userRoutes);
 app.use('/api', todoRoutes);
+app.use('/api', actorRoutes);
+app.use('/api', movieRoutes);
 
 
 db.sequelize.sync().then(() => {
